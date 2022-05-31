@@ -1,0 +1,336 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<projectReference>
+		<comment>"Six real cars" data set. Thanks to Quantin Hayez for having gathered
+		the data (from the manufacturers web sites). Transformed into XMCDA
+		and published with his permission. Note that the weights and thresholds have been
+		arbitrarily fixed.</comment>
+	</projectReference>
+
+	<criteria>
+		<criterion id="c01" name="Installation_cost">
+			<scale>
+				<quantitative>
+					<preferenceDirection>min</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>18.53</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>37.05</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c02" name="OM_annual_cost">
+			<scale>
+				<quantitative>
+					<preferenceDirection>min</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.2</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>0.51</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c03" name="Life_span">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>6.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>18.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c04" name="Recreation_opportunities">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c05" name="Aesthetics">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.8</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c06" name="Positive_mental_health_impact">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c07" name="Educational_opportunities">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c08" name="Research_opportunities">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c09" name="Innovation">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.8</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c10" name="Local_air_temperature_reduction">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.36</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>3.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c11" name="Runoff_retention">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>6.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>18.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c12" name="Water_quality">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.8</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c13" name="Noise_reduction">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>3.60</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>6.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c14" name="Air_quality">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.8</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c15" name="Building_energy_demand_impact">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>4.8</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>14.4</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c16" name="Biodiversity">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>1.8</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="c17" name="Manufacturing_emissions">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<real>0.0012</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>0.012</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+	</criteria>
+</xmcda:XMCDA>
+  
