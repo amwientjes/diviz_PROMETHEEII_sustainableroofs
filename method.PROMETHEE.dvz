@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workflow PUBLIC "-//Telecom Bretagne//DTD XML Praxis Workflow 3.0//EN" "http://perso.telecom-bretagne.eu/~bigaret/praxis/dtd/workflow_3.0.dtd">
+
+<workflow>
+    <id>ACED0005757200135B4C6A6176612E6C616E672E4F626A6563743B90CE589F1073296C020000787000000002737200116A6176612E726D692E6467632E564D4944F8865BAFA4A56DB60200025B0004616464727400025B424C00037569647400154C6A6176612F726D692F7365727665722F5549443B7870757200025B42ACF317F8060854E002000078700000000829E4B9C64B984AC6737200136A6176612E726D692E7365727665722E5549440F12700DBF364F12020003530005636F756E744A000474696D65490006756E6971756578708670000001808A3160E677E4FE7B7400106D6574686F642E50524F4D4554484545</id>
+    <name>method.PROMETHEE</name>
+    <user>7decf529ce6cea71_-9fb68ff_180030df699_-8000</user>
+    <inputs>
+        <input type="file" x="25" y="75" name="" id="1">
+            <infile>/Users/audreywientjes/Desktop/Capstone/Diviz/alternatives.xml</infile>
+        </input>
+        <input type="file" x="50" y="275" name="" id="2">
+            <infile>/Users/audreywientjes/Desktop/Capstone/Diviz/performances.xml</infile>
+        </input>
+        <input type="file" x="25" y="375" name="" id="3">
+            <infile>/Users/audreywientjes/Desktop/Capstone/Diviz/weights.xml</infile>
+        </input>
+        <input type="file" x="50" y="175" name="" id="4">
+            <infile>/Users/audreywientjes/Desktop/Capstone/Diviz/criteria.xml</infile>
+        </input>
+    </inputs>
+    <programs>
+        <program idref="RXMCDA___rankAlternativesValues___1.1" x="825" y="100" info="RXMCDA rankAlternativesValues 1.1" id="rankAlternativesValues-1">
+            <parameter idref="maxMin">
+                <data />
+            </parameter>
+            <parameter idref="maxMin-dep">
+                <info name="Use maxMin as input?" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="maxMin-use-file-dep">
+                <info name="Supply maxMin as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="maxMin-gui-302">
+                <info name="maxMin" value="The lowest value is ranked first" />
+                <data>min</data>
+            </parameter>
+            <parameter idref="alternatives">
+                <data input_id="1" />
+            </parameter>
+            <parameter idref="overallValues">
+                <data>PrometheeFlows-1.output0</data>
+            </parameter>
+            <parameter idref="messages">
+                <data>rankAlternativesValues-1.messages</data>
+            </parameter>
+            <parameter idref="alternativesRanks-output">
+                <data>rankAlternativesValues-1.alternativesRanks-output</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="ITTB___plotCriteriaValues___1.1" x="825" y="275" info="ITTB plotCriteriaValues 1.1" id="plotCriteriaValues-1">
+            <parameter idref="methodPlotOptions">
+                <data />
+            </parameter>
+            <parameter idref="methodPlotOptions-use-file-dep">
+                <info name="Supply methodPlotOptions as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="methodPlotOptions-gui-value-placeholder-1">
+                <info name="Chart type:" value="bar chart" />
+                <data>bar_chart</data>
+            </parameter>
+            <parameter idref="methodPlotOptions-gui-value-placeholder-2">
+                <info name="Order by:" value="values" />
+                <data>order_by_values</data>
+            </parameter>
+            <parameter idref="methodPlotOptions-gui-value-placeholder-3">
+                <info name="Order:" value="increasing" />
+                <data>increasing</data>
+            </parameter>
+            <parameter idref="methodPlotOptions-gui-value-placeholder-4">
+                <info name="Colors:" value="black and white" />
+                <data>false</data>
+            </parameter>
+            <parameter idref="methodPlotOptions-gui-value-placeholder-5">
+                <data>black</data>
+            </parameter>
+            <parameter idref="methodPlotOptions-gui-value-placeholder-6">
+                <data>black</data>
+            </parameter>
+            <parameter idref="methodPlotOptions-gui-value-placeholder-7">
+                <info name="Chart title:" value="" />
+                <data />
+            </parameter>
+            <parameter idref="methodPlotOptions-gui-value-placeholder-8">
+                <info name="X axis label:" value="" />
+                <data />
+            </parameter>
+            <parameter idref="methodPlotOptions-gui-value-placeholder-9">
+                <info name="Y axis label:" value="" />
+                <data />
+            </parameter>
+            <parameter idref="criteria">
+                <data input_id="4" />
+            </parameter>
+            <parameter idref="criteriaValues">
+                <data input_id="3" />
+            </parameter>
+            <parameter idref="criteriaValuesPlot">
+                <data>plotCriteriaValues-1.criteriaValuesPlot</data>
+            </parameter>
+            <parameter idref="messages">
+                <data>plotCriteriaValues-1.messages</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="J-MCDA___PrometheePreference___0.5.5" x="275" y="100" info="J-MCDA PrometheePreference 0.5.5" id="PrometheePreference-1">
+            <parameter idref="input0">
+                <data input_id="1" />
+            </parameter>
+            <parameter idref="input0-dep">
+                <info name="Use alternatives as input?" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="input1">
+                <data input_id="4" />
+            </parameter>
+            <parameter idref="input2">
+                <data input_id="3" />
+            </parameter>
+            <parameter idref="input3">
+                <data input_id="2" />
+            </parameter>
+            <parameter idref="output0">
+                <data>PrometheePreference-1.output0</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>PrometheePreference-1.output1</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="J-MCDA___PrometheeFlows___0.5.5" x="575" y="50" info="J-MCDA PrometheeFlows 0.5.5" id="PrometheeFlows-1">
+            <parameter idref="input0">
+                <data input_id="1" />
+            </parameter>
+            <parameter idref="input0-dep">
+                <info name="Use alternatives as input?" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="input1">
+                <data>PrometheePreference-1.output0</data>
+            </parameter>
+            <parameter idref="input2">
+                <data />
+            </parameter>
+            <parameter idref="input2-use-file-dep">
+                <info name="Supply flow_type as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="input2-gui-502">
+                <info name="flow_type" value="The net flow." />
+                <data>item2</data>
+            </parameter>
+            <parameter idref="output0">
+                <data>PrometheeFlows-1.output0</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>PrometheeFlows-1.output1</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="J-MCDA___PrometheeFlows___0.5.5" x="575" y="200" info="J-MCDA PrometheeFlows 0.5.5" id="PrometheeFlows-2">
+            <parameter idref="input0">
+                <data input_id="1" />
+            </parameter>
+            <parameter idref="input0-dep">
+                <info name="Use alternatives as input?" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="input1">
+                <data>PrometheePreference-1.output0</data>
+            </parameter>
+            <parameter idref="input2">
+                <data />
+            </parameter>
+            <parameter idref="input2-use-file-dep">
+                <info name="Supply flow_type as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="input2-gui-502">
+                <info name="flow_type" value="The positive flow." />
+                <data>item0</data>
+            </parameter>
+            <parameter idref="output0">
+                <data>PrometheeFlows-2.output0</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>PrometheeFlows-2.output1</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="J-MCDA___PrometheeFlows___0.5.5" x="575" y="350" info="J-MCDA PrometheeFlows 0.5.5" id="PrometheeFlows-3">
+            <parameter idref="input0">
+                <data input_id="1" />
+            </parameter>
+            <parameter idref="input0-dep">
+                <info name="Use alternatives as input?" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="input1">
+                <data>PrometheePreference-1.output0</data>
+            </parameter>
+            <parameter idref="input2">
+                <data />
+            </parameter>
+            <parameter idref="input2-use-file-dep">
+                <info name="Supply flow_type as a file?" value="0" />
+                <data>0</data>
+            </parameter>
+            <parameter idref="input2-gui-502">
+                <info name="flow_type" value="The negative flow." />
+                <data>item1</data>
+            </parameter>
+            <parameter idref="output0">
+                <data>PrometheeFlows-3.output0</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>PrometheeFlows-3.output1</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+        <program idref="J-MCDA___PrometheeProfiles___0.5.5" x="300" y="325" info="J-MCDA PrometheeProfiles 0.5.5" id="PrometheeProfiles-1">
+            <parameter idref="input0">
+                <data input_id="1" />
+            </parameter>
+            <parameter idref="input0-dep">
+                <info name="Use alternatives as input?" value="1" />
+                <data>1</data>
+            </parameter>
+            <parameter idref="input1">
+                <data input_id="4" />
+            </parameter>
+            <parameter idref="input2">
+                <data input_id="2" />
+            </parameter>
+            <parameter idref="output0">
+                <data>PrometheeProfiles-1.output0</data>
+            </parameter>
+            <parameter idref="output1">
+                <data>PrometheeProfiles-1.output1</data>
+            </parameter>
+            <parameter idref="TIMEOUT">
+                <info name="Timeout? (0 for no timeout)" value="60" />
+                <data>60</data>
+            </parameter>
+            <parameter idref="VERBOSE">
+                <info name="Verbose mode" value="Moderately verbose" />
+                <data>T2</data>
+            </parameter>
+        </program>
+    </programs>
+</workflow>
+
