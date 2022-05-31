@@ -1,0 +1,17 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<projectReference>
+		<comment>"Six real cars" data set. Thanks to Quantin Hayez for having gathered
+		the data (from the manufacturers web sites). Transformed into XMCDA
+		and published with his permission. Note that the weights and thresholds have been
+		arbitrarily fixed.</comment>
+	</projectReference>
+
+	<alternatives>
+		<alternative id="a01" name="Green Roof" />
+		<alternative id="a02" name="Solar Roof" />
+		<alternative id="a03" name="Biosolar Roof" />
+	</alternatives>
+
+</xmcda:XMCDA>
+  
